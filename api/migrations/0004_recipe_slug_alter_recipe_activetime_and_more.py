@@ -19,7 +19,7 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='recipe',
             name='activeTime',
-            field=models.DurationField(blank=True, null=True),
+            field=models.IntegerField(blank=True, null=True),
         ),
         migrations.AlterField(
             model_name='recipe',
@@ -29,7 +29,7 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='recipe',
             name='inactiveTime',
-            field=models.DurationField(blank=True, null=True),
+            field=models.IntegerField(blank=True, null=True),
         ),
         migrations.AlterField(
             model_name='recipe',
