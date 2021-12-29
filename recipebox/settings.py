@@ -46,6 +46,13 @@ INSTALLED_APPS = [
     'gunicorn'
 ]
 
+ALLOWED_HOSTS = [
+    'http://localhost:8080',
+    'http://127.0.0.1:8080',
+    'https://pmcghen.github.io',
+    'https://pmcg-recipe-box.herokuapp.com'
+]
+
 CORS_ALLOWED_ORIGINS = [
     'http://localhost:8080',
     'http://127.0.0.1:8080',
