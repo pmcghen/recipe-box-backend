@@ -47,10 +47,10 @@ INSTALLED_APPS = [
 ]
 
 ALLOWED_HOSTS = [
-    'http://localhost:8080',
-    'http://127.0.0.1:8080',
-    'https://pmcghen.github.io',
-    'https://pmcg-recipe-box.herokuapp.com'
+    'localhost',
+    '127.0.0.1',
+    'pmcghen.github.io',
+    'pmcg-recipe-box.herokuapp.com'
 ]
 
 CORS_ALLOWED_ORIGINS = [
