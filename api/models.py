@@ -9,6 +9,7 @@ class Recipe(models.Model):
     activeTime = models.IntegerField(blank=True, null=True)
     inactiveTime = models.IntegerField(blank=True, null=True)
     directions = models.TextField(max_length=2000)
+    image = models.ImageField(upload_to='recipes/images/', blank=True)
     notes = models.TextField(max_length=2000, blank=True, null=True)
     isFeatured = models.BooleanField(default=False)
     rating = models.IntegerField()
