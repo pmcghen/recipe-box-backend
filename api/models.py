@@ -13,6 +13,7 @@ class Recipe(models.Model):
     notes = models.TextField(max_length=2000, blank=True, null=True)
     isFeatured = models.BooleanField(default=False)
     rating = models.IntegerField()
+    isPrivate = models.BooleanField(default=False)
 
     def __str__(self):
         return self.name
