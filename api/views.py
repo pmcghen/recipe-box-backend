@@ -1,9 +1,10 @@
 from django.db.models import Q
 from rest_framework import viewsets
+from rest_framework.views import APIView
 
 from rest_framework.response import Response
 from rest_framework.decorators import api_view
-from .serializers import RecipeSerializer
+from .serializers import RecipeSerializer, UserSerializer
 from .models import Recipe
 
 class RecipeViewSet(viewsets.ModelViewSet):
@@ -22,3 +23,8 @@ def search(request):
         return Response(serializer.data)
     else:
         return Response({"recipes": []})
+
+class CurrentUserView(APIView):
+    def get(self, request):
+        serializer = UserSerializer(request.user)
+        return Response(serializer.data)

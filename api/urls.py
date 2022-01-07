@@ -11,5 +11,6 @@ router.register(r'recipes', views.RecipeViewSet)
 urlpatterns = [
     path('', include(router.urls)),
     path('search/', views.search),
+    path('users/current/', views.CurrentUserView.as_view()),
     path('api-auth/', include('rest_framework.urls', namespace='rest_framework'))
 ]
