@@ -9,6 +9,9 @@ class UserProfile(models.Model):
     bio = models.TextField(max_length=500, blank=True, default='')
     avatar = models.ImageField(upload_to='avatars/', blank=True)
 
+    def __str__(self):
+        return self.user.username
+
 @receiver(post_save, sender=User)
 def createUserProfile(sender, instance, created, **kwargs):
     if created:
