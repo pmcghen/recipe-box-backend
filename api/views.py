@@ -17,7 +17,7 @@ def search(request):
 
     if query:
         recipes = Recipe.objects.filter(
-            Q(name__icontains=query) | Q(ingredients__icontains=query) | Q(directions__icontains=query) | Q(notes__icontains=query))
+            Q(name__icontains=query) | Q(ingredients__icontains=query) | Q(directions__icontains=query) | Q(notes__icontains=query) | Q(tags__icontains=query))
         serializer = RecipeSerializer(recipes, many=True)
 
         return Response(serializer.data)

@@ -27,6 +27,7 @@ INSTALLED_APPS = [
     'corsheaders',
     'djoser',
     'gunicorn',
+    'taggit',
 ]
 
 ALLOWED_HOSTS = [
