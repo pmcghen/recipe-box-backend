@@ -2,6 +2,7 @@ from django.db import models
 from django.contrib.auth.models import User
 from django.db.models.signals import post_save
 from django.dispatch import receiver
+from taggit.managers import TaggableManager
 
 # https://simpleisbetterthancomplex.com/tutorial/2016/07/22/how-to-extend-django-user-model.html#onetoone
 class UserProfile(models.Model):
@@ -34,6 +35,7 @@ class Recipe(models.Model):
     isFeatured = models.BooleanField(default=False)
     rating = models.IntegerField()
     isPrivate = models.BooleanField(default=False)
+    tags = TaggableManager()
 
     def __str__(self):
         return self.name
