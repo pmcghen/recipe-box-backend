@@ -11,7 +11,7 @@ cryptography==36.0.1
 defusedxml==0.7.1
 distlib==0.3.4
 dj-database-url==0.5.0
-Django==4.0
+Django==4.0.1
 django-cloudinary-storage==0.3.0
 django-cors-headers==3.10.1
 django-environ==0.8.1
@@ -28,8 +28,8 @@ itypes==1.2.0
 Jinja2==3.0.3
 MarkupSafe==2.0.1
 oauthlib==3.1.1
-Pillow==8.4.0
-pipenv==2021.11.23
+Pillow==9.0.0
+pipenv==2022.1.8
 platformdirs==2.4.0
 psycopg2-binary==2.9.2
 pycodestyle==2.8.0
