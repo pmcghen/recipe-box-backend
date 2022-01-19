@@ -1,4 +1,7 @@
 # The Recipe Box
+
+![Heroku](https://heroku-badge.herokuapp.com/?app=pmcg-recipe-box&root=api)
+
 **A basic CMS for storing recipes, written in Django.**
 
 This is my first Django project, and it's a constant work in progress as I continue to learn. The front end is [available here](https://github.com/pmcghen/recipe-box), and you can see it in action at [pmcghen.github.io/recipe-box/](https://pmcghen.github.io/recipe-box/).
