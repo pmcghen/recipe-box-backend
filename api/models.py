@@ -2,7 +2,6 @@ from django.db import models
 from django.contrib.auth.models import User
 from django.db.models.signals import post_save
 from django.dispatch import receiver
-from taggit.managers import TaggableManager
 
 # https://simpleisbetterthancomplex.com/tutorial/2016/07/22/how-to-extend-django-user-model.html#onetoone
 class UserProfile(models.Model):
@@ -24,7 +23,7 @@ def saveUserProfile(sender, instance, **kwargs):
 
 class Recipe(models.Model):
     name = models.CharField(max_length=200)
-    author = models.ForeignKey(User, on_delete=models.CASCADE)
+    author = models.ForeignKey('auth.User', related_name='recipes', on_delete=models.CASCADE)
     slug = models.SlugField()
     ingredients = models.TextField(max_length=2000)
     activeTime = models.IntegerField(blank=True, null=True)
@@ -35,7 +34,6 @@ class Recipe(models.Model):
     isFeatured = models.BooleanField(default=False)
     rating = models.IntegerField()
     isPrivate = models.BooleanField(default=False)
-    tags = TaggableManager()
 
     def __str__(self):
         return self.name

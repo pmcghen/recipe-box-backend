@@ -21,13 +21,11 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'cloudinary_storage',
     'cloudinary',
-    'api.apps.ApiConfig',
+    'api',
     'rest_framework',
     'rest_framework.authtoken',
     'corsheaders',
-    'djoser',
     'gunicorn',
-    'taggit',
 ]
 
 ALLOWED_HOSTS = [
@@ -148,3 +146,8 @@ CLOUDINARY_STORAGE = {
 
 MEDIA_URL = '/recipe-box/'
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+
+REST_FRAMEWORK = {
+    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
+    'PAGE_SIZE': 10
+}

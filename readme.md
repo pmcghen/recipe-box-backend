@@ -1,6 +1,6 @@
 # The Recipe Box
 
-![Heroku](https://heroku-badge.herokuapp.com/?app=pmcg-recipe-box&root=api)
+![Heroku](https://heroku-badge.herokuapp.com/?app=pmcg-recipe-box)
 
 **A basic CMS for storing recipes, written in Django.**
 
@@ -33,7 +33,7 @@ Images are uploaded to [Cloudinary](https://cloudinary.com/), so you'll want to 
 
 ## Available endpoints
 
-### `/api/recipes/`
+### `/recipes/`
 
 Returns all recipes. The expected response will look like this:
 
@@ -66,7 +66,7 @@ Returns all recipes. The expected response will look like this:
 ]
 ```
 
-### `/api/search/`
+### `/search/`
 
 Expects a `POST` request with a JSON object in the `body`.
 

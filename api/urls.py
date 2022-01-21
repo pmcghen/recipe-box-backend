@@ -1,16 +1,12 @@
-from django.urls import include, path
-from rest_framework import routers, urlpatterns
+from django.urls import path
 from . import views
 
-router = routers.DefaultRouter()
-router.register(r'recipes', views.RecipeViewSet)
-
-# Wire up API using automatic routing
-# Include URLs for browsable API
-
 urlpatterns = [
-    path('', include(router.urls)),
+    path('recipes/', views.RecipeList.as_view(), name='recipe-list'),
+    path('recipes/<int:pk>', views.RecipeDetail.as_view(), name='recipe-detail'),
+    path('users/', views.UserList.as_view(), name='user-list'),
+    path('users/<int:pk>/', views.UserDetail.as_view(), name='user-detail'),
+    path('', views.api_root),
     path('search/', views.search),
     path('users/current/', views.CurrentUserView.as_view()),
-    path('api-auth/', include('rest_framework.urls', namespace='rest_framework'))
 ]
