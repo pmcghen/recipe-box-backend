@@ -27,7 +27,7 @@ itypes==1.2.0
 Jinja2==3.0.3
 MarkupSafe==2.0.1
 oauthlib==3.1.1
-Pillow==8.4.0
+Pillow==9.0.0
 pipenv==2022.1.8
 platformdirs==2.4.0
 psycopg2-binary==2.9.2
